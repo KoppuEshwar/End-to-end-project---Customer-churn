@@ -5,6 +5,7 @@ import pickle
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
+server = app.server
 
 @app.route("/")
 def home_page():
