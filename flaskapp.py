@@ -5,13 +5,13 @@ import pickle
 from flask import Flask, request, render_template
 
 flaskapp = Flask(__name__)
-server = app.server
+server = flaskapp.server
 
-@app.route("/")
+@flaskapp.route("/")
 def home_page():
     return render_template('home.html')
 
-@app.route("/", methods=['POST'])
+@flaskapp.route("/", methods=['POST'])
 def predict():
 
     """ Selected feature are Dependents, tenure, OnlineSecurity,
